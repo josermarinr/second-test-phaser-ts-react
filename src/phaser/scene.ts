@@ -108,9 +108,20 @@ export class MainScene extends Phaser.Scene {
     });
 
     this.add.rectangle(0, 0, this.game.scale.gameSize.width, this.yOffset - this.tileHeight, 0x9ef1ff).setOrigin(0);
-    const title = this.add.image(this.game.scale.gameSize.width / 2, 0, 'title').setOrigin(0.5, 0)
+    const title = this.add.text(120, 16* (this.game.scale.gameSize.width / 515), 'fuking test',
+      {
+        align: 'left',
+        color: '#000000',
+        fontSize: '40px',
+        stroke: '#000000',
+        strokeThickness: 1
+      })
+    .setOrigin(0.5, 0)
     .setScale(this.game.scale.gameSize.width / 515)
     .setDepth(1);
+    // const title = this.add.image(this.game.scale.gameSize.width / 2, 0, 'title').setOrigin(0.5, 0)
+    // .setScale(this.game.scale.gameSize.width / 515)
+    // .setDepth(1);
 
     this.scoreText = this.add
     .text(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'Score: 0',
