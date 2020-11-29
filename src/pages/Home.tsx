@@ -4,7 +4,7 @@ import { gameInstanceInit } from "./../phaser/phaserInstance";
 
 
 export const Home: React.FC = () => {
-    // eslint-disable-next-line
+   /*eslint-disable */
     let gameInstance: Phaser.Game | null = null;
 
     useEffect(() => {
