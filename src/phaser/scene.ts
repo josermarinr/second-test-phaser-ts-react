@@ -102,11 +102,14 @@ export class MainScene extends Phaser.Scene {
     // .setOrigin(0.5, 0)
     // .setScale(this.game.scale.gameSize.width / 515)
     // .setDepth(1);
-    const title = this.add.image(this.game.scale.gameSize.width / 2, 0, 'title').setOrigin(0.5, 0)
+    let title = this.add.image(this.game.scale.gameSize.width / 2, 0, 'title').setOrigin(0.5, 0);
+    
+    title
     .setScale(this.game.scale.gameSize.width / 515)
     .setDepth(1);
     
-    const scoreLayer = this.add.image(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer')
+    let scoreLayer = this.add.image(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer');
+    scoreLayer
     .setOrigin(0.5)
     .setScale(this.game.scale.gameSize.width / 1021)
     .setDepth(2);
@@ -124,7 +127,8 @@ export class MainScene extends Phaser.Scene {
     .setScale(this.game.scale.gameSize.width / 515)
     .setDepth(2);
 
-    const levelLayer = this.add.image(407 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer')
+    let levelLayer = this.add.image(407 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer');
+    levelLayer
     .setOrigin(0.5)
     .setScale(this.game.scale.gameSize.width / 1021)
     .setDepth(2);
@@ -142,7 +146,8 @@ export class MainScene extends Phaser.Scene {
     .setScale(this.game.scale.gameSize.width / 515)
     .setDepth(2);
       //todo change the alfa of bg and put more shadow in grid of tile
-    const bg = this.add.image(0,this.yOffset - this.tileHeight / 1.6, 'bg').setOrigin(0).setScale(this.game.scale.gameSize.width/750).setAlpha(0.5)
+    const bg = this.add.image(0,this.yOffset - this.tileHeight / 1.6, 'bg');
+    bg.setOrigin(0).setScale(this.game.scale.gameSize.width/750).setAlpha(0.5);
     this.add.image(-20, this.yOffset - this.tileHeight / 2, 'back-fence').setOrigin(0).setScale(this.game.scale.gameSize.width / 1021);
     this.add.image(-10, this.yOffset + this.tileHeight * 6, 'front-fence')
     .setOrigin(0).setScale(this.game.scale.gameSize.width / 1021);
