@@ -1,0 +1,164 @@
+{
+    "frames": [
+        {
+            "filename": "dinoegg",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "diplodocusgirl",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 201,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "diplodocusmale",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 0,
+                "y": 201
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "egg",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 201,
+                "y": 201
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "pterodactilo",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 402,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "pterodactiloyellow",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 402,
+                "y": 201
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "rexado",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 0,
+                "y": 402
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "rexbaby",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 201,
+                "y": 402
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "stegosaurus",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 402,
+                "y": 402
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "stegosaurusdad",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 603,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "triceratopsgirl",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 603,
+                "y": 201
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "triceratopsmale",
+            "frame": {
+                "w": 201,
+                "h": 201,
+                "x": 603,
+                "y": 402
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
