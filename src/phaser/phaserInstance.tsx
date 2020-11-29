@@ -36,7 +36,7 @@ export const gameInstanceInit = () =>{
         height: fukingSizeHeight(),
         type: Phaser.AUTO,
         scale: {
-            mode: Phaser.Scale.FIT,
+            mode: Phaser.Scale.RESIZE,
             autoCenter: Phaser.Scale.CENTER_BOTH
         },
         parent: 'game-main',
