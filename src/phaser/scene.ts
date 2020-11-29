@@ -90,7 +90,8 @@ export class MainScene extends Phaser.Scene {
       on: false
     });
 
-    const sky = this.add.rectangle(0, 0, this.game.scale.gameSize.width, this.yOffset - this.tileHeight /2 +30, 0x9ef1ff).setOrigin(0); 
+    const sky = this.add.rectangle(0, 0, this.game.scale.gameSize.width, this.yOffset - this.tileHeight /2 +30, 0x9ef1ff)
+    sky.setOrigin(0); 
     // const title = this.add.text(120, 16* (this.game.scale.gameSize.width / 515), 'fuking test',
     //   {
     //     align: 'left',
