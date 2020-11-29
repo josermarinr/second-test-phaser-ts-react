@@ -3,7 +3,6 @@ import './App.css';
 import {Home} from './pages/Home'
 
 function App() {
-  let isDesktop = false;
   if(window.innerWidth > 700){
     return (
       <div>
