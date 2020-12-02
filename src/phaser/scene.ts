@@ -92,43 +92,14 @@ export class MainScene extends Phaser.Scene {
 
     const sky = this.add.rectangle(0, 0, this.game.scale.gameSize.width, this.yOffset - this.tileHeight /2 +30, 0x9ef1ff)
     sky.setOrigin(0); 
-    // const title = this.add.text(120, 16* (this.game.scale.gameSize.width / 515), 'fuking test',
-    //   {
-    //     align: 'left',
-    //     color: '#000000',
-    //     fontSize: '40px',
-    //     stroke: '#000000',
-    //     strokeThickness: 1
-    //   })
-    // .setOrigin(0.5, 0)
-    // .setScale(this.game.scale.gameSize.width / 515)
-    // .setDepth(1);
-    let title = this.add.image(this.game.scale.gameSize.width / 2, 0, 'title').setOrigin(0.5, 0);
+
+    let title = this.add.image(this.game.scale.gameSize.width / 2.5 , 0, 'title').setOrigin(0.5, 0);
     
     title
     .setScale(this.game.scale.gameSize.width / 515)
     .setDepth(1);
-    
-    let scoreLayer = this.add.image(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer');
-    scoreLayer
-    .setOrigin(0.5)
-    .setScale(this.game.scale.gameSize.width / 1021)
-    .setDepth(2);
 
-    this.scoreText = this.add
-    .text(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'Puntos: 0',
-      {
-        align: 'center',
-        fontSize: '26px',
-        color: '#000000',
-        stroke: '#000000',
-        strokeThickness: 1
-      })
-    .setOrigin(0.5)
-    .setScale(this.game.scale.gameSize.width / 515)
-    .setDepth(2);
-
-    let levelLayer = this.add.image(407 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer');
+    let levelLayer = this.add.image(407 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 550), 'layer');
     levelLayer
     .setOrigin(0.5)
     .setScale(this.game.scale.gameSize.width / 1021)
@@ -144,7 +115,19 @@ export class MainScene extends Phaser.Scene {
         strokeThickness: 1
       })
     .setOrigin(0.5)
-    .setScale(this.game.scale.gameSize.width / 515)
+    .setScale(this.game.scale.gameSize.width / 800)
+    .setDepth(2);
+    this.scoreText = this.add
+    .text(407 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 600), 'Puntos: 0',
+      {
+        align: 'center',
+        fontSize: '26px',
+        color: '#000000',
+        stroke: '#000000',
+        strokeThickness: 1
+      })
+    .setOrigin(0.5)
+    .setScale(this.game.scale.gameSize.width / 800)
     .setDepth(2);
       //todo change the alfa of bg and put more shadow in grid of tile
     const bg = this.add.image(0,this.yOffset - this.tileHeight / 1.6, 'bg');
@@ -153,11 +136,16 @@ export class MainScene extends Phaser.Scene {
     this.add.image(-10, this.yOffset + this.tileHeight * 6, 'front-fence')
     .setOrigin(0).setScale(this.game.scale.gameSize.width / 1021);
     
-    this.layer = this.add.image(0, this.game.scale.gameSize.height - 5, 'layer')
-    .setOrigin(0, 1).setScale((this.game.scale.gameSize.width / 6) / 199 * 1.7);
+   
 
-    const restartSign = this.add.image(this.game.scale.gameSize.width - 5, this.game.scale.gameSize.height+10, 'reload')
-    .setOrigin(1).setScale((this.game.scale.gameSize.width / 6) / 224 * 2).setInteractive();
+    this.layer = this.add.image(111 * (this.game.scale.gameSize.width / 515), 168 * (this.game.scale.gameSize.width / 515), 'layer')
+    .setOrigin(0.5)
+    .setScale(this.game.scale.gameSize.width / 1021)
+    .setDepth(0);
+    this.getPowerups();
+    const restartSign = this.add.image(this.game.scale.gameSize.width + 30, this.game.scale.gameSize.height * 0.01, 'reload')
+    .setOrigin(1).setScale((this.game.scale.gameSize.width / 6) / 200).setInteractive();
+    restartSign.setAngle(-90)
     restartSign.on('pointerdown', () => 
         {
             restartStats();
@@ -165,7 +153,7 @@ export class MainScene extends Phaser.Scene {
         }
     );
 
-    this.getPowerups();
+  
 
     this.tiles = this.add.group();
 
@@ -220,9 +208,10 @@ export class MainScene extends Phaser.Scene {
     this.bombs = [];
     const bombs = bombPowerUps;
     for (let i = 0; i < bombs; i++) {
-      const bomb = this.add.image(i * this.tileWidth * 1.5 / 1.7 + this.tileWidth * 1.5 / 1.7,
-        this.game.scale.gameSize.height - 5 - this.layer!.height * this.layer!.scale / 1.8, 'meteor')
-        .setScale(this.assetScale * 1.5).setOrigin(0.5).setInteractive();
+       
+      const bomb = this.add.image(i * 111 *  ((this.game.scale.gameSize.width / 515) *1.4/ 2.7 ) + 45,
+        168 * (this.game.scale.gameSize.width / 515) + 15 - this.layer!.height * this.layer!.scale / 4, 'meteor')
+        .setScale(this.assetScale *0.9 ).setOrigin(0.5).setInteractive();
       (bomb as Phaser.GameObjects.Sprite).on('pointerdown', () => this.triggerBomb());
       this.bombs.push(bomb);
     }
