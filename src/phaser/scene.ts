@@ -209,7 +209,7 @@ export class MainScene extends Phaser.Scene {
     const bombs = bombPowerUps;
     for (let i = 0; i < bombs; i++) {
        
-      const bomb = this.add.image(i * 111 *  ((this.game.scale.gameSize.width / 515) *1.4/ 2.7 ) + 45,
+      const bomb = this.add.image(i * 111 *  ((this.game.scale.gameSize.width / 515) *1.4/ 2.7 ) + (this.game.scale.gameSize.width * 0.1),
         168 * (this.game.scale.gameSize.width / 515) + 15 - this.layer!.height * this.layer!.scale / 4, 'meteor')
         .setScale(this.assetScale *0.9 ).setOrigin(0.5).setInteractive();
       (bomb as Phaser.GameObjects.Sprite).on('pointerdown', () => this.triggerBomb());

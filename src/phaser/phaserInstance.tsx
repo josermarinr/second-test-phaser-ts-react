@@ -8,21 +8,28 @@ export let levelChangeScore = 1000;
 export let currentActiveTileTypes = 4;
 export let bombPowerUps = 3;
 
-export const fukingSizeWidth = () =>{
-    if(window.innerWidth<= 700){
+export const sizeWidth = () =>{
+    if(window.innerWidth< 800){
         return window.innerWidth;
     }
     if(window.innerWidth > 700){
-        return 425
+        return 375
     }
 }
 
-export const fukingSizeHeight = () =>{
+export const sizeHeight = () =>{
 
-    if(window.innerHeight > 700){
-        return 772
+    if(window.innerHeight< 800){
+        return 812
     }
     return window.innerHeight;
+}
+
+export const scaleOrFixingSize = () => {
+    if(window.innerWidth< 800){
+        return Phaser.Scale.RESIZE
+    }
+    return Phaser.Scale.FIT
 }
 
 export const gameInstanceInit = () =>{
@@ -32,11 +39,11 @@ export const gameInstanceInit = () =>{
                 
             ]
         },
-        width: fukingSizeWidth(),
-        height: fukingSizeHeight(),
+        width: sizeWidth(),
+        height: sizeHeight(),
         type: Phaser.AUTO,
         scale: {
-            mode: Phaser.Scale.FIT,
+            mode: scaleOrFixingSize(),
             autoCenter: Phaser.Scale.CENTER_BOTH
         },
         parent: 'game-main',
